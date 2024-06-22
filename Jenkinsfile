@@ -14,6 +14,7 @@ pipeline {
                 sh "docker build -t my-note-app ."
             }
         }
+        
         stage("Push to Docker Hub"){
             steps {
                 echo "Pushing the image to docker hub"
