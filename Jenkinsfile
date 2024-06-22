@@ -1,6 +1,6 @@
 pipeline {
-    agent any 
-    
+    agent any
+
     stages{
         stage("Clone Code"){
             steps {
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 echo "Deploying the container"
                 sh "docker-compose down && docker-compose up -d"
-                
+
             }
         }
     }
